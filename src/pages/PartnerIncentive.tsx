@@ -3,25 +3,31 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
+  width: 100vw;
+  min-height: 100vh;
   padding: 2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
 `;
 
 const Title = styled.h1`
-  color: #f4a261;
+  color: #2a9d8f;
+  font-size: 3rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const PartnerIncentive: React.FC = () => {
   return (
     <Section>
       <Title>Incentivos para Oficinas Parceiras</Title>
-      <p>
-        Tornar-se uma oficina parceira da Porto Seguro traz inúmeros benefícios. Além de visibilidade garantida em nossa plataforma,
-        sua oficina pode se beneficiar de suporte exclusivo, treinamentos e muito mais.
-      </p>
-      <p>
-        Entre em contato para saber mais detalhes e fazer parte do nosso time de oficinas parceiras!
-      </p>
+      <p>Descubra os benefícios de ser uma oficina parceira da Porto Seguro.</p>
     </Section>
   );
 };

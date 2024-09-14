@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const Nav = styled.nav`
   background-color: #2a9d8f;
   padding: 1rem;
+  width: 100vw;  // Garantindo que ocupe a largura total da tela
 `;
 
 const NavList = styled.ul`
@@ -14,10 +15,19 @@ const NavList = styled.ul`
   justify-content: center;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const NavItem = styled.li`
   margin: 0 1rem;
+
+  @media (max-width: 768px) {
+    margin: 1rem 0;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -27,6 +37,10 @@ const StyledLink = styled(Link)`
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
   }
 `;
 

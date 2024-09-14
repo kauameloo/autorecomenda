@@ -1,94 +1,43 @@
 // src/pages/Contact.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
+  width: 100vw;
+  min-height: 100vh;
   padding: 2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
 `;
 
 const Title = styled.h1`
-  color: #f4a261;
+  color: #2a9d8f;
+  font-size: 3rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-`;
+const Text = styled.p`
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 800px;
 
-const Input = styled.input`
-  padding: 0.8rem;
-  margin: 0.5rem;
-  width: 80%;
-  max-width: 500px;
-`;
-
-const TextArea = styled.textarea`
-  padding: 0.8rem;
-  margin: 0.5rem;
-  width: 80%;
-  max-width: 500px;
-  height: 150px;
-`;
-
-const SubmitButton = styled.button`
-  padding: 1rem 2rem;
-  background-color: #2a9d8f;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  
-  &:hover {
-    background-color: #264653;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
   }
 `;
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    alert(`Mensagem enviada! Nome: ${formData.name}, Email: ${formData.email}`);
-  };
-
   return (
     <Section>
       <Title>Contato</Title>
-      <p>Entre em contato conosco para mais informações ou dúvidas.</p>
-      <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          name="name"
-          placeholder="Seu nome"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <Input
-          type="email"
-          name="email"
-          placeholder="Seu email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <TextArea
-          name="message"
-          placeholder="Sua mensagem"
-          value={formData.message}
-          onChange={handleChange}
-        />
-        <SubmitButton type="submit">Enviar Mensagem</SubmitButton>
-      </Form>
+      <Text>Para mais informações, entre em contato conosco através do email: contato@portoseguro.com.br</Text>
     </Section>
   );
 };

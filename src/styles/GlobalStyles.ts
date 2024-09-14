@@ -12,6 +12,17 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
+    width: 100vw;  // Garantindo que o body ocupe toda a largura da tela
+    overflow-x: hidden;  // Evitando qualquer rolagem horizontal
+
+    @media (max-width: 768px) {
+      font-size: 90%;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 85%;
+    }
   }
 
   a {
@@ -25,6 +36,11 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 `;
 

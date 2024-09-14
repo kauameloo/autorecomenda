@@ -4,18 +4,35 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Section = styled.section`
+  width: 100vw;  // Ocupar a largura total da tela
+  min-height: 100vh;  // Garantir que o conteúdo ocupe a altura total da tela
   padding: 2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4; // Cor de fundo para visualização
 `;
 
 const Title = styled.h1`
   color: #2a9d8f;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const Button = styled(Link)`
@@ -26,10 +43,16 @@ const Button = styled(Link)`
   font-size: 1.2rem;
   border-radius: 5px;
   margin: 0.5rem;
+  text-align: center;
   display: inline-block;
 
   &:hover {
     background-color: #2a9d8f;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
   }
 `;
 
