@@ -14,7 +14,7 @@ const Section = styled.section`
 `;
 
 const Title = styled.h1`
-  color: #2a9d8f;
+  color: #007BFF;
   font-size: 3rem;
   text-align: center;
 
@@ -23,36 +23,45 @@ const Title = styled.h1`
   }
 `;
 
-const MemberList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
+const MemberContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 `;
 
-const MemberItem = styled.li`
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
+const MemberCard = styled.div`
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 `;
 
-const Group: React.FC = () => {
+const MemberName = styled.h3`
+  color: #264653;
+`;
+
+const GroupMembers: React.FC = () => {
+  const members = [
+    { id: 1, name: 'João Silva', role: 'Desenvolvedor Front-End' },
+    { id: 2, name: 'Maria Souza', role: 'Desenvolvedora Back-End' },
+    { id: 3, name: 'Carlos Pereira', role: 'UX/UI Designer' },
+  ];
+
   return (
     <Section>
       <Title>Integrantes do Projeto</Title>
-      <MemberList>
-        <MemberItem>João Silva</MemberItem>
-        <MemberItem>Maria Oliveira</MemberItem>
-        <MemberItem>Carlos Pereira</MemberItem>
-        <MemberItem>Ana Costa</MemberItem>
-      </MemberList>
+      <MemberContainer>
+        {members.map(member => (
+          <MemberCard key={member.id}>
+            <MemberName>{member.name}</MemberName>
+            <p>Função: {member.role}</p>
+          </MemberCard>
+        ))}
+      </MemberContainer>
     </Section>
   );
 };
 
-export default Group;
+export default GroupMembers;

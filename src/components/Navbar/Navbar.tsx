@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
-  background-color: #2a9d8f;
+  background-color: #007BFF;
   padding: 1rem;
   width: 100vw;  // Garantindo que ocupe a largura total da tela
 `;

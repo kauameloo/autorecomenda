@@ -15,7 +15,7 @@ const Section = styled.section`
 `;
 
 const Title = styled.h1`
-  color: #2a9d8f;
+  color: #007BFF;
   font-size: 3rem;
   text-align: center;
 
@@ -36,7 +36,7 @@ const Subtitle = styled.p`
 `;
 
 const Button = styled(Link)`
-  background-color: #264653;
+  background-color: #007BFF;
   color: white;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -47,7 +47,7 @@ const Button = styled(Link)`
   display: inline-block;
 
   &:hover {
-    background-color: #2a9d8f;
+    background-color: #949c9e;
   }
 
   @media (max-width: 768px) {
