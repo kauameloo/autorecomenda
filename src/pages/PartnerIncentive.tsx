@@ -15,7 +15,7 @@ const Section = styled.section`
 
 const Title = styled.h1`
   color: #007BFF;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
 
   @media (max-width: 768px) {

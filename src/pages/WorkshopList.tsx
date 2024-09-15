@@ -8,14 +8,16 @@ const Section = styled.section`
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #f4f4f4;
+
+  gap: 120px;
 `;
 
 const Title = styled.h1`
   color: #007BFF;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -47,6 +49,9 @@ const WorkshopList: React.FC = () => {
     { id: 1, name: 'Oficina do Zé', location: 'São Paulo, SP', rating: 4.8 },
     { id: 2, name: 'Auto Mecânica Avenida', location: 'Rio de Janeiro, RJ', rating: 4.5 },
     { id: 3, name: 'Centro Automotivo XPTO', location: 'Belo Horizonte, MG', rating: 4.7 },
+    { id: 4, name: 'Oficina do Pedro', location: 'Curitiba, PR', rating: 4.6 },
+    { id: 5, name: 'Mecânica São Lucas', location: 'Porto Alegre, RS', rating: 4.4 },
+    { id: 6, name: 'Auto Center Nacional', location: 'Brasília, DF', rating: 4.9 },
   ];
 
   return (

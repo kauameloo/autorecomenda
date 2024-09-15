@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   width: 100vw;  // Ocupar a largura total da tela
-  min-height: 100vh;  // Garantir que o conteúdo ocupe a altura total da tela
+  height: 100vh;  // Garantir que o conteúdo ocupe a altura total da tela
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ const Section = styled.section`
 
 const Title = styled.h1`
   color: #007BFF;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -25,7 +25,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
   text-align: center;
 

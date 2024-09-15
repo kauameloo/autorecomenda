@@ -7,7 +7,7 @@ const Section = styled.section`
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #f4f4f4;
 `;
@@ -31,7 +31,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
   color: #007BFF;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
 

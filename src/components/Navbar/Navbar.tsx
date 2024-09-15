@@ -2,8 +2,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import logo from '../../assets/logo.svg'
 
 const Nav = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #007BFF;
   padding: 1rem;
   width: 100vw;  // Garantindo que ocupe a largura total da tela
@@ -33,7 +37,7 @@ const NavItem = styled.li`
 const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 20px;
 
   &:hover {
     text-decoration: underline;
@@ -47,6 +51,7 @@ const StyledLink = styled(Link)`
 const Navbar: React.FC = () => {
   return (
     <Nav>
+      <img src={logo} width="200px" alt="" />
       <NavList>
         <NavItem>
           <StyledLink to="/">Home</StyledLink>
