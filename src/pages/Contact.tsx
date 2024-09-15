@@ -110,6 +110,13 @@ const Form = styled.form`
   }
 `;
 
+const SuccessMessage = styled.p`
+  color: green;
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+`;
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -117,6 +124,8 @@ const Contact: React.FC = () => {
     phone: '',
     message: ''
   });
+
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -126,7 +135,22 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formData);
-    alert('Formulário enviado com sucesso!');
+
+    // Mostrar a mensagem de sucesso
+    setSuccessMessage('Formulário enviado com sucesso!');
+
+    // Limpar a mensagem após 5 segundos
+    setTimeout(() => {
+      setSuccessMessage(null);
+    }, 5000);
+
+    // Limpar o formulário
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
   };
 
   return (
@@ -181,6 +205,9 @@ const Contact: React.FC = () => {
             />
             <button type="submit">Enviar</button>
           </Form>
+
+          {/* Mensagem de sucesso */}
+          {successMessage && <SuccessMessage>{successMessage}</SuccessMessage>}
         </FormContainer>
       </Container>
     </Section>
