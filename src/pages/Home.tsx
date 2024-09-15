@@ -24,7 +24,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   text-align: center;
 

@@ -43,14 +43,10 @@ const Container = styled.div`
 `;
 
 const Text = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: left;
   max-width: 800px;
   margin-bottom: 2rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
 `;
 
 const ContactSection = styled.div`
