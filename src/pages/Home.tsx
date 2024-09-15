@@ -47,7 +47,8 @@ const Button = styled(Link)`
   display: inline-block;
 
   &:hover {
-    background-color: #949c9e;
+    color: #ccc;
+    background-color: #0069D9;
   }
 
   @media (max-width: 768px) {

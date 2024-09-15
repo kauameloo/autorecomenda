@@ -30,7 +30,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #2a9d8f;
+  color: #007BFF;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 2rem;

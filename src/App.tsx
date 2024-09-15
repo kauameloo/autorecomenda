@@ -9,6 +9,7 @@ import WorkshopList from './pages/WorkshopList';
 import GroupMembers from './pages/GroupMembers';
 import GlobalStyle from './styles/GlobalStyles';
 import Navbar from './components/Navbar/Navbar';
+import ChatBotIcon from './components/Chatbot/Chatbot';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,8 @@ const App: React.FC = () => {
         <Route path="/workshops" element={<WorkshopList />} />
         <Route path="/group" element={<GroupMembers />} />
       </Routes>
+
+      <ChatBotIcon />
     </Router>
   );
 };
