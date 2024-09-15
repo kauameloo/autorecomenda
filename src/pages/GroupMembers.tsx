@@ -56,7 +56,7 @@ const MemberName = styled.h3`
 const GroupMembers: React.FC = () => {
   const members = [
     { id: 1, name: 'Caike Dametto', photo: '', rm: 'RM558614', role: 'Desenvolvedor Front-End' },
-    { id: 2, name: 'Kauã de Melo Rodrigues', photo: '', rm: 'RM555168', role: 'Desenvolvedora Back-End' },
+    { id: 2, name: 'Kauã de Melo Rodrigues', photo: '', rm: 'RM555168', role: 'Desenvolvedor Back-End' },
     { id: 3, name: 'Guilherme Janunzzi', photo: '', rm: 'RM558461', role: 'UX/UI Designer' },
   ];
 
