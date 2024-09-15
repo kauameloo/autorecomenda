@@ -10,6 +10,7 @@ import GroupMembers from './pages/GroupMembers';
 import GlobalStyle from './styles/GlobalStyles';
 import Navbar from './components/Navbar/Navbar';
 import ChatBotIcon from './components/Chatbot/Chatbot';
+import Footer from './components/Footer/Footer';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
       </Routes>
 
       <ChatBotIcon />
+      <Footer/> 
     </Router>
   );
 };

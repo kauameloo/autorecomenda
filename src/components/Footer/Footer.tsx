@@ -7,7 +7,7 @@ const FooterWrapper = styled.footer`
   color: white;
   text-align: center;
   padding: 1rem;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   bottom: 0;
 `;
@@ -15,7 +15,7 @@ const FooterWrapper = styled.footer`
 const Footer: React.FC = () => {
   return (
     <FooterWrapper>
-      © {new Date().getFullYear()} Porto Seguro Project - Todos os direitos reservados.
+      © {new Date().getFullYear()} AutoRecomenda - Todos os direitos reservados.
     </FooterWrapper>
   );
 };

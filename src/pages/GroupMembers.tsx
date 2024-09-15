@@ -8,9 +8,11 @@ const Section = styled.section`
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #f4f4f4;
+
+  gap: 150px;
 `;
 
 const Title = styled.h1`
@@ -44,9 +46,9 @@ const MemberName = styled.h3`
 
 const GroupMembers: React.FC = () => {
   const members = [
-    { id: 1, name: 'João Silva', role: 'Desenvolvedor Front-End' },
-    { id: 2, name: 'Maria Souza', role: 'Desenvolvedora Back-End' },
-    { id: 3, name: 'Carlos Pereira', role: 'UX/UI Designer' },
+    { id: 1, name: 'Caike Dametto', photo: '', rm: 'RM558614', role: 'Desenvolvedor Front-End' },
+    { id: 2, name: 'Kauã de Melo Rodrigues', photo: '', rm: 'RM555168', role: 'Desenvolvedora Back-End' },
+    { id: 3, name: 'Guilherme Janunzzi', photo: '', rm: 'RM558461', role: 'UX/UI Designer' },
   ];
 
   return (
@@ -55,8 +57,12 @@ const GroupMembers: React.FC = () => {
       <MemberContainer>
         {members.map(member => (
           <MemberCard key={member.id}>
+
+            <div>
             <MemberName>{member.name}</MemberName>
+            <p>RM: {member.rm}</p>
             <p>Função: {member.role}</p>
+            </div>
           </MemberCard>
         ))}
       </MemberContainer>
