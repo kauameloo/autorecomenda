@@ -1,5 +1,8 @@
 # AutoRecomenda - Sistema de Avaliação de Oficinas Automotivas
 
+## **Video de apresentação do site**
+- https://youtu.be/uzOYf-Lh2W0
+
 ## Visão Geral
 
 **AutoRecomenda** é um sistema desenvolvido para ranquear e recomendar oficinas automotivas com base em avaliações, qualidade de serviço e feedback de clientes. O projeto visa facilitar a busca por oficinas confiáveis, além de oferecer ferramentas de gestão para as oficinas, incluindo sistemas de incentivos e treinamentos.
