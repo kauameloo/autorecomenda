@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# AutoRecomenda - Sistema de Avaliação de Oficinas Automotivas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Visão Geral
 
-Currently, two official plugins are available:
+**AutoRecomenda** é um sistema desenvolvido para ranquear e recomendar oficinas automotivas com base em avaliações, qualidade de serviço e feedback de clientes. O projeto visa facilitar a busca por oficinas confiáveis, além de oferecer ferramentas de gestão para as oficinas, incluindo sistemas de incentivos e treinamentos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto foi desenvolvido utilizando **Vite**, **React** e **TypeScript**, com a estilização feita usando **Styled Components**.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Listagem de Oficinas:** Apresenta uma lista de oficinas automotivas recomendadas.
+- **Página Sobre:** Descreve o objetivo e o funcionamento do sistema.
+- **Página de Contato:** Formulário de contato e informações da empresa.
+- **Sistema de Incentivos:** Exibe os incentivos oferecidos às oficinas parceiras.
+- **Chatbot (Fictício):** Ícone persistente para simular a funcionalidade de um chatbot.
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Vite**: Ferramenta de build rápida para desenvolvimento frontend.
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **TypeScript**: Linguagem de programação com tipagem estática.
+- **Styled Components**: Biblioteca para estilização de componentes React.
+- **HTML5 e CSS3**: Estrutura e estilização da aplicação.
+- **JavaScript/TypeScript**: Lógica do frontend.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Pré-requisitos
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Antes de iniciar o projeto, você precisa ter as seguintes ferramentas instaladas:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Node.js** (>= v14.0.0)
+- **npm** ou **yarn**
+
+## Instalação
+
+Siga os passos abaixo para instalar e rodar o projeto localmente:
+
+1. **Clone o repositório**
+
+   ```bash
+   git clone https://github.com/usuario/autorecomenda.git
+
+2. **Acesse o diretório do projeto**
+
+   ```bash
+   cd autorecomenda
+
+3. **Instale as dependências**
+
+   ```bash
+   npm i
+
+4. **Inicie o servidor de desenvolvimento**
+
+   ```bash
+   npm run dev
